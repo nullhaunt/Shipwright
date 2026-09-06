@@ -856,6 +856,12 @@ nx_create_nro(soh
     ROMFS ${DEKO3D_ROMFS}
 )
 
+add_custom_command(
+        OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/soh.nro
+        APPEND
+        DEPENDS ${DEKO3D_DKSH}
+)
+
 INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/soh.nro DESTINATION . COMPONENT ship)
 
 elseif(CMAKE_SYSTEM_NAME MATCHES "CafeOS")
